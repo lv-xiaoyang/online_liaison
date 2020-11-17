@@ -30,7 +30,7 @@ class IndexController extends Controller
         if(empty($course_type_id)){
             return json_encode(['code'=>0002,'msg'=>'缺少分类id']);die;
         }
-        $course_data=CourseModel::where('course_type',$course_type_id)->limit(6)->get();
+        $course_data=CourseModel::where('course_type',$course_type_id)->limit(8)->get();
         return json_encode($course_data);
     }
     /**
